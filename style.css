@@ -1,0 +1,63 @@
+body{
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+}
+
+header {
+    background-color: #E0B0FF;
+    padding: 20px 0,;
+}
+
+.encabezado{
+    position: relative;
+    margin: 0 auto;
+    width: 940px;
+    font-size: 40px;
+    padding: 1em;
+}
+
+form{
+    margin: 40px;
+    display: block;
+}
+
+.etiqueta{
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 10px 10px 0;
+}
+
+.caja-texto{
+    display: block;
+    font-size: 18px;
+    margin: 0.5em 0 1em;
+    padding: 10px;
+    width: 90%;
+    
+}
+
+.boton-accion{
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    margin: 1em;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    background: #2F2140;
+    border: none;
+    border-radius: 10px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.boton-accion:hover{
+    background: #9400D3;
+    transform: scale(1.2);
+}
+
+.texto-resultado{
+    display: block;
+}
