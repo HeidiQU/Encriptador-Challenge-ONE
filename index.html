@@ -21,13 +21,18 @@
         <formn>
             <label class="etiqueta">Ingrese Texto a Encriptar:<textarea cols="70" rows="5" id="texto-original" class="caja-texto" required></textarea></label>
 
-            <input type="submit" id="encrp-txt" value="Encriptar Texto" class="boton-accion">
+            <input type="submit" id="encrp-txt" value="Encriptar Texto" class="boton-accion" onclick="botonEncriptar()">
 
-            <input type="submit" id="desencrp-txt" value="Desencriptar Texto" class="boton-accion">
+            <input type="submit" id="desencrp-txt" value="Desencriptar Texto" class="boton-accion" onclick="botonDesencriptar()">
+
+            <input type="submit" id="clean-txt" value="Limpiar Campos" class="boton-accion" onclick="botonLimpiar()">
             
             <label class="etiqueta">Resultado:<textarea cols="70" rows="5" id="texto-resultado" class="caja-texto"></textarea></label>
+
+            <input type="submit" id="copy-txt" value="Copiar Resultado" class="boton-accion" onclick="botonCopiar()">
         </formn>
     </main>
+    <script src="app.js"></script>
     <footer>
         <p class="creditos">Heidi Quiñones Urióstegui ONE-G6</p>
     </footer>
