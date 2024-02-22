@@ -15,7 +15,6 @@ const matriz_codigo = [
 // CODIGO PARA ENCRIPTAR EL TEXTO INGRESADO
 function botonEncriptar(){
     const textoEncriptado = accionEncriptar(txtOriginal.value);
-
     txtResultado.value = textoEncriptado;
 }
 
@@ -48,12 +47,12 @@ function accionDesencriptar(frase){
     }
     return frase;
 }
-
+/*
 // CODIGO PARA LIMPIAR LOS CAMPOS 
 function botonLimpiar(){
     txtOriginal.value="";
     txtResultado.value="";
-}
+}*/
 
 // CODIGO PARA COPIAR EL CAMPO DE RESULTADO
 function botonCopiar(){
