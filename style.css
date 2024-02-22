@@ -5,36 +5,43 @@ body{
 
 header {
     background-color: #E0B0FF;
-    padding: 20px 0;
+    padding: 10px 0;
 }
 
 .encabezado{
     position: relative;
+    display: block;
     margin: 0 auto;
-    width: 940px;
-    font-size: 40px;
-    padding: 1em;
+    width: auto;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0.5em;
 }
 
 form{
-    margin: 40px;
+    margin: 10px;
     display: block;
 }
 
 .etiqueta{
     display: block;
+    margin: 0.5em 1em 1em;
     font-size: 25px;
     font-weight: bold;
+    font-style: italic;
+    color: #2F2140;
     margin: 10px 10px 0;
 }
 
 .caja-texto{
     display: block;
     font-size: 18px;
-    margin: 0.5em 0 1em;
-    padding: 10px;
-    width: 90%;
     
+    padding: 10px;
+    width: 95%;
+    border-color: #2F2140;
+    border-width: 2.5px;
+    border-radius: 20px;
 }
 
 .boton-accion{
@@ -61,3 +68,25 @@ form{
 .texto-resultado{
     display: block;
 }
+
+
+/* Codigo para hacer responsiva la pagina*/
+
+@media screen and (max-width:480px){
+    .encabezado, h1{
+        width: auto;
+    }
+    
+    .boton-accion{
+        font-size: x-small;
+        font-weight: 100;
+        width: 25%;
+    }
+
+    footer{
+        font-size: x-small;
+    }
+    
+}
+
+
