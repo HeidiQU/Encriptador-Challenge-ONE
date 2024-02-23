@@ -6,16 +6,18 @@ body{
 
 header {
     background-color: #E0B0FF;
-    padding: 10px 0;
+    text-align: center;
+    padding: 10px 0 5px 0;
+    width: 100%;
 }
 
 .encabezado{
     position: relative;
-    display: block;
     margin: 0 auto;
     width: auto;
     font-size: 30px;
     font-weight: bold;
+    color: #2F2140;
     padding: 0.5em;
 }
 
@@ -25,15 +27,10 @@ form{
     background: linear-gradient(#E0B0FF, #2F2140);
 }
 
-.cuerpo{
-    margin: 0 10px 0 10px;
-}
-
 .etiqueta{
-    display: block;
-    margin: 0 1em 1em 0;
-    padding: 2em;
-    font-size: 25px;
+    display: block;   
+    padding: 15px;
+    font-size: 25px ;
     font-weight: bold;
     font-style: italic;
     color: #2F2140;
@@ -44,7 +41,7 @@ form{
     display: block;
     font-size: 18px;
     padding: 10px;
-    margin-top: 1em;
+    margin: 1em 0 0 0;
     width: 95%;
     border-color: #2F2140;
     border-width: 2.5px;
@@ -74,13 +71,13 @@ form{
 
 
 footer{
-    padding: 120px 10px 20px 10px;
+    padding: 20px 10px 20px 10px;
     background-color: #2F2140;
     color: #E0B0FF;
 }
 
 
-/* Codigo para hacer responsiva la pagina*/
+/* Codigo para hacer responsiva la pagina */
 
 @media screen and (max-width:480px){
     .encabezado, h1{
@@ -98,5 +95,6 @@ footer{
     }
     
 }
+
 
 

@@ -1,4 +1,3 @@
-
 const txtOriginal = document.querySelector("#texto-original");
 const txtResultado = document.querySelector("#texto-resultado");
 const txtCopiado = "";
@@ -12,9 +11,11 @@ const matriz_codigo = [
 ];
 
 
-// CODIGO PARA ENCRIPTAR EL TEXTO INGRESADO
+// CODIGO PARA ENCRIPTAR EL TEXTO
 function botonEncriptar(){
+    console.log(txtOriginal.value)
     const textoEncriptado = accionEncriptar(txtOriginal.value);
+    console.log(textoEncriptado);
     txtResultado.value = textoEncriptado;
 }
 
@@ -24,7 +25,7 @@ function accionEncriptar(frase){
             frase = frase.replaceAll(
                 matriz_codigo[i][0],
                 matriz_codigo[i][1]
-            )
+            );
         }
     }
     return frase;
@@ -47,17 +48,15 @@ function accionDesencriptar(frase){
     }
     return frase;
 }
-/*
+
 // CODIGO PARA LIMPIAR LOS CAMPOS 
 function botonLimpiar(){
     txtOriginal.value="";
     txtResultado.value="";
-}*/
+}
 
 // CODIGO PARA COPIAR EL CAMPO DE RESULTADO
 function botonCopiar(){
     const textoCopiado = txtResultado.value;
-
-    console.log(textoCopiado);
-
+    txtOriginal.value = textoCopiado;
 }
