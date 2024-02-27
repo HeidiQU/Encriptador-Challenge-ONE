@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icons8-key-64.png" type="image/png" sizes="16x16">
+
     <title>Encriptador Challenge ONE-G6</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> 
@@ -19,17 +22,23 @@
     </header>
     <main>
         <form>
-            <label class="etiqueta">Escribe el Texto aquí:<textarea cols="70" rows="5" id="texto-original" class="caja-texto" required></textarea></label>
-            <button id="encrp-txt" class="boton-accion" onclick="botonEncriptar()">Encriptar Texto</button>
-             
-            <input type="submit" id="desencrp-txt" value="Desencriptar Texto" class="boton-accion" onclick="botonDesencriptar()">
-            <input type="submit" id="clean-txt" value="Limpiar Campos" class="boton-accion" onclick="botonLimpiar()">
-            <label class="etiqueta">Resultado:<textarea cols="70" rows="5" id="texto-resultado" class="caja-texto"></textarea></label>
-            <input type="submit" id="copy-txt" value="Copiar Resultado" class="boton-accion" onclick="botonCopiar()">            
+            <div>
+                <label class="etiqueta">Escribe el Texto aquí:<textarea cols="70" rows="5" id="texto-original" class="caja-texto" required></textarea></label>
+                <label class="etiqueta2">Solo caracteres en MINÚSCULA, sin acentos ni caracteres especiales.</label>
+            </div>
+            <div>
+                <button id="encrp-txt" class="boton-accion" onclick="botonEncriptar()">Encriptar</button>
+                <button id="desencrp-txt" class="boton-accion" onclick="botonDesencriptar()">Desencriptar</button>
+                <button id="clean-txt" class="boton-accion" onclick="botonLimpiar()">Borrar</button>
+            </div>
+            <div class="caja-resultado">
+                <p id="texto-resultado">Listo para Encriptar</p></label>
+            </div>
+            <button id="copy-txt" class="boton-accion" onclick="botonCopiar()">Copiar Resultado</button>
         </form>
     </main>    
     <footer>
-        <p class="creditos">Heidi Quiñones Urióstegui ONE-G6</p>
+        <p class="creditos">&copy Heidi Quiñones Urióstegui ONE-G6</p>
     </footer>
     <script src="app.js"></script> 
 </body>

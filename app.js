@@ -13,10 +13,19 @@ const matriz_codigo = [
 
 // CODIGO PARA ENCRIPTAR EL TEXTO
 function botonEncriptar(){
-    console.log(txtOriginal.value)
-    const textoEncriptado = accionEncriptar(txtOriginal.value);
-    console.log(textoEncriptado);
-    txtResultado.value = textoEncriptado;
+    if (!/^[a-z]+(\s[a-z]+)*$/.test(txtOriginal.value)){
+        console.log("caracteres no permitidos");
+        txtResultado.value = "RECUERDA SOLO MENSAJE EN MINÚSCULAS SIN CARACTERES ESPECIALES"
+    }
+    else{
+        console.log(txtOriginal.value)
+        const textoEncriptado = accionEncriptar(txtOriginal.value);
+        txtResultado.value = textoEncriptado;
+        document.getElementById("texto-resultado").innerHTML=textoEncriptado;
+        console.log(txtResultado.value);
+        console.log(txtOriginal.value);
+    }
+    return;
 }
 
 function accionEncriptar(frase){
@@ -33,12 +42,15 @@ function accionEncriptar(frase){
 
 // CODIGO PARA DESENCRIPTAR EL TEXTO INGRESADO
 function botonDesencriptar(){
+    console.log(txtOriginal.value)
     const textoNormal = accionDesencriptar(txtOriginal.value);
+    console.log(textoNormal);
     txtResultado.value = textoNormal;
+    return;
 }
 
 function accionDesencriptar(frase){
-    for (let i=0; i<matriz_codigo.length; i++){
+    for (let i=4; i>=0; i--){
         if (frase.includes(matriz_codigo[i][1])){
             frase = frase.replaceAll(
                 matriz_codigo[i][1],
@@ -53,10 +65,12 @@ function accionDesencriptar(frase){
 function botonLimpiar(){
     txtOriginal.value="";
     txtResultado.value="";
+    return;
 }
 
 // CODIGO PARA COPIAR EL CAMPO DE RESULTADO
 function botonCopiar(){
     const textoCopiado = txtResultado.value;
     txtOriginal.value = textoCopiado;
+    return;
 }
