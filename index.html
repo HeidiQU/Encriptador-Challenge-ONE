@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="icons8-key-64.png" type="image/png" sizes="16x16">
-
+    <link rel="icon" href="icons8-key-64.png" type="image/png" sizes="64x64">
     <title>Encriptador Challenge ONE-G6</title>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -27,14 +26,14 @@
                 <label class="etiqueta2">Solo caracteres en MINÚSCULA, sin acentos ni caracteres especiales.</label>
             </div>
             <div>
-                <button id="encrp-txt" class="boton-accion" onclick="botonEncriptar()">Encriptar</button>
-                <button id="desencrp-txt" class="boton-accion" onclick="botonDesencriptar()">Desencriptar</button>
-                <button id="clean-txt" class="boton-accion" onclick="botonLimpiar()">Borrar</button>
+                <button type="button" id="encrp-txt" class="boton-accion" onclick="botonEncriptar()">Encriptar</button>
+                <button type="button" id="desencrp-txt" class="boton-accion" onclick="botonDesencriptar()">Desencriptar</button>
+                <button type="button" id="clean-txt" class="boton-accion" onclick="botonLimpiar()">Borrar</button>
             </div>
             <div class="caja-resultado">
                 <p id="texto-resultado">Listo para Encriptar</p></label>
             </div>
-            <button id="copy-txt" class="boton-accion" onclick="botonCopiar()">Copiar Resultado</button>
+            <button type="button" id="copy-txt" class="boton-accion" onclick="botonCopiar()">Copiar Resultado</button>
         </form>
     </main>    
     <footer>

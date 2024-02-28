@@ -1,6 +1,7 @@
 const txtOriginal = document.querySelector("#texto-original");
 const txtResultado = document.querySelector("#texto-resultado");
 const txtCopiado = "";
+const txtLeyenda = "Listo para Encriptar"
 
 const matriz_codigo = [
     ["e", "enter"],     //indices 0,0 y 0,1
@@ -15,15 +16,14 @@ const matriz_codigo = [
 function botonEncriptar(){
     if (!/^[a-z]+(\s[a-z]+)*$/.test(txtOriginal.value)){
         console.log("caracteres no permitidos");
-        txtResultado.value = "RECUERDA SOLO MENSAJE EN MINÚSCULAS SIN CARACTERES ESPECIALES"
+        txtResultado.innerHTML = "RECUERDA SOLO MENSAJE EN MINÚSCULAS SIN CARACTERES ESPECIALES"
     }
     else{
         console.log(txtOriginal.value)
         const textoEncriptado = accionEncriptar(txtOriginal.value);
         txtResultado.value = textoEncriptado;
-        document.getElementById("texto-resultado").innerHTML=textoEncriptado;
+        document.getElementById("texto-resultado").innerHTML=txtResultado.value;
         console.log(txtResultado.value);
-        console.log(txtOriginal.value);
     }
     return;
 }
@@ -46,6 +46,7 @@ function botonDesencriptar(){
     const textoNormal = accionDesencriptar(txtOriginal.value);
     console.log(textoNormal);
     txtResultado.value = textoNormal;
+    document.getElementById("texto-resultado").innerHTML=txtResultado.value;
     return;
 }
 
@@ -64,7 +65,7 @@ function accionDesencriptar(frase){
 // CODIGO PARA LIMPIAR LOS CAMPOS 
 function botonLimpiar(){
     txtOriginal.value="";
-    txtResultado.value="";
+    txtResultado.innerHTML=txtLeyenda;
     return;
 }
 
@@ -72,5 +73,7 @@ function botonLimpiar(){
 function botonCopiar(){
     const textoCopiado = txtResultado.value;
     txtOriginal.value = textoCopiado;
+
+    txtResultado.innerHTML=txtLeyenda;
     return;
 }
