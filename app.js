@@ -15,15 +15,15 @@ const matriz_codigo = [
 // CODIGO PARA ENCRIPTAR EL TEXTO
 function botonEncriptar(){
     if (!/^[a-z]+(\s[a-z]+)*$/.test(txtOriginal.value)){
-        console.log("caracteres no permitidos");
+        //console.log("caracteres no permitidos");
         txtResultado.innerHTML = "RECUERDA SOLO MENSAJE EN MINÚSCULAS SIN CARACTERES ESPECIALES"
     }
     else{
-        console.log(txtOriginal.value)
+        //console.log(txtOriginal.value)
         const textoEncriptado = accionEncriptar(txtOriginal.value);
         txtResultado.value = textoEncriptado;
         document.getElementById("texto-resultado").innerHTML=txtResultado.value;
-        console.log(txtResultado.value);
+        // console.log(txtResultado.value);
     }
     return;
 }
@@ -42,9 +42,9 @@ function accionEncriptar(frase){
 
 // CODIGO PARA DESENCRIPTAR EL TEXTO INGRESADO
 function botonDesencriptar(){
-    console.log(txtOriginal.value)
+    //console.log(txtOriginal.value)
     const textoNormal = accionDesencriptar(txtOriginal.value);
-    console.log(textoNormal);
+    //console.log(textoNormal);
     txtResultado.value = textoNormal;
     document.getElementById("texto-resultado").innerHTML=txtResultado.value;
     return;
@@ -73,7 +73,7 @@ function botonLimpiar(){
 function botonCopiar(){
     const textoCopiado = txtResultado.value;
     txtOriginal.value = textoCopiado;
-
+    navigator.clipboard.writeText(textoCopiado)
     txtResultado.innerHTML=txtLeyenda;
     return;
 }
