@@ -3,7 +3,7 @@ Desafío ONE - Alura G6 Heidi Quiñones
 
 Aplicación que encripta textos.
 
-Las "llaves" de encriptación que utilizaremos son las siguientes:
+La clave de encriptación utilizada es la siguiente:
 
 La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"
@@ -16,7 +16,7 @@ Requisitos:
 Debe funcionar solo con letras minúsculas
 No deben ser utilizados letras con acentos ni caracteres especiales
 Debe ser posible convertir una palabra para la versión encriptada también devolver una palabra encriptada para su versión original.
-La página debe tener campos parainserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
+La página debe tener campos para inserción del texto que será encriptado o desencriptado, y el usuario debe poder escoger entre as dos opciones.
 El resultado debe ser mostrado en la pantalla.
 
 Extras:
