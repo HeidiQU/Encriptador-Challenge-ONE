@@ -90,9 +90,21 @@ form{
 
 
 footer{
-    padding: 30px 10px 20px 10px;
+    width: auto;
+    padding: 0 10px 20px 10px;
     background-color: #2F2140;
     color: #E0B0FF;
+}
+
+.redes li{
+    display: inline;
+
+}
+
+.logosmall{
+    display: inline-block;
+    width: 45px;
+    height: 45px;
 }
 
 
@@ -111,6 +123,11 @@ footer{
 
     footer{
         font-size: x-small;
+    }
+
+    .logosmall{
+        width: 30px;
+        height: 30px;
     }
     
 }
